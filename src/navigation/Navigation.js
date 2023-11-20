@@ -24,7 +24,10 @@ export default function Navigation() {
         component={PokedexNavigation}
         options={{
           tabBarLabel: "",
-          tabBarIcon: () => renderPokeball()
+          tabBarIcon: () => renderPokeball(),
+          title: "Pokedex",
+          headerTransparent: false,
+          
         }} />
       <Tab.Screen
         name='FavoriteTab'
