@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react'
 import { getPokemonDetailsByIdApi } from '../api/Pokemon';
 import Header from '../components/Pokemon/Header';
 import Type from '../components/Pokemon/Type';
+import Stats from '../components/Pokemon/Stats';
 
 export default function Pokemon(props) {
 
@@ -34,9 +35,8 @@ export default function Pokemon(props) {
         image={pokemon.sprites.other["official-artwork"].front_default}
         type={pokemon.types[0].type.name}
       />
-      <Type
-        types={pokemon.types}
-      />
+      <Type types={pokemon.types}/>
+      <Stats stats={pokemon.stats}/>
     </ScrollView>
   )
 }
